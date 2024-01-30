@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+rm -rf lib
+mkdir -p lib
+echo "#!/usr/bin/env node" > lib/cli.js
+./node_modules/.bin/lsc -cpb src/cli.ls >> lib/cli.js
+chmod 755 lib/cli.js
